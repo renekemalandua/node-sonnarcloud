@@ -16,4 +16,7 @@ jobs:
           cache: npm
       - run: npm install --frozen-lockfile
       - run: npm test
-
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
