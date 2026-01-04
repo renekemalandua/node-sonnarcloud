@@ -14,5 +14,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - run: npm install --frozen-lockfile
       - run: npm test
 
